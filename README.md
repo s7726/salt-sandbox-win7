@@ -1,5 +1,5 @@
 salt-sandbox-win7
------------------
+=================
 
 Working salt sandbox including a win7 minion
 
@@ -13,7 +13,7 @@ append 'example.com' to each of the given hostnames.
 Vagrant should be setting the windows hostname and domain but isn't.
 
 Windows Minion Version
-======================
+----------------------
 At the moment (2014-08-22), the default bootstrap script used by Vagrant for
 Windows minions is hard-coded to use salt minion version 2014.1.3-1, which
 is out of date. In order to automatically provision the Windows minion with
@@ -29,7 +29,7 @@ salt minion is 2014.1.10, meaning that this line should be modified to read
 `$url = "https://docs.saltstack.com/downloads/Salt-Minion-2014.1.10-$arch-Setup.exe"`
 
 Windows Minion First Boot
-=========================
+-------------------------
 By default, the Windows box is configured to start with the GUI shown. This is
 so that several issues in the box may be taken care of after the first boot.
 
