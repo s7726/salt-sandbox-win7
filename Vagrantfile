@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     ## Choose your base box
     master_config.vm.box = "hashicorp/precise64"
 
-    config.vm.provider "virtualbox" do |vb|
+    master_config.vm.provider "virtualbox" do |vb|
       vb.name = "salt-master-precise64"
       vb.customize ["modifyvm", :id, "--accelerate3d", "off"]
       vb.customize ["modifyvm", :id, "--memory", "512"]
@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
     ## Choose your base box
     minion_config.vm.box = "hashicorp/precise64"
 
-    config.vm.provider "virtualbox" do |vb|
+    minion_config.vm.provider "virtualbox" do |vb|
       vb.name = "salt-minion-precise64"
       vb.customize ["modifyvm", :id, "--accelerate3d", "off"]
       vb.customize ["modifyvm", :id, "--memory", "512"]
@@ -104,7 +104,7 @@ Vagrant.configure("2") do |config|
     minion_config.vm.box = "lmayorga1980/windows7-sp1"
     minion_config.vm.communicator = "winrm"
 
-    config.vm.provider "virtualbox" do |vb|
+    minion_config.vm.provider "virtualbox" do |vb|
       vb.name = "salt-minion-windows"
       vb.gui = true
       vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
